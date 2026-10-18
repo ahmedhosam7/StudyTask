@@ -182,4 +182,82 @@ render();
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 }
+</script><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<section id="autoSchedule" dir="rtl" style="padding:16px;margin:16px;border:1px solid #456;border-radius:12px">
+  <h3>📄 استخراج المحاضرات تلقائيًا</h3>
+  <p>ارفع صورة جدول أو ملف PDF. راجع النص المستخرج قبل اعتماده.</p>
+  <input id="scheduleFile" type="file" accept="image/*,.pdf">
+  <button id="extractSchedule" type="button">استخراج الجدول</button>
+  <p id="extractStatus" role="status"></p>
+  <textarea id="extractResult" rows="12" style="width:100%;box-sizing:border-box" placeholder="سيظهر النص المستخرج هنا..."></textarea>
+</section>
+
+<script>
+(async function () {
+  const fileInput = document.getElementById('scheduleFile');
+  const button = document.getElementById('extractSchedule');
+  const status = document.getElementById('extractStatus');
+  const output = document.getElementById('extractResult');
+
+  button.addEventListener('click', async () => {
+    const file = fileInput.files[0];
+    if (!file) {
+      status.textContent = 'اختار صورة أو ملف PDF أولًا.';
+      return;
+    }
+
+    button.disabled = true;
+    output.value = '';
+
+    try {
+      let pages = [];
+
+      if (file.type === 'application/pdf' || /\.pdf$/i.test(file.name)) {
+        const pdfjs = window.pdfjsLib;
+        pdfjs.GlobalWorkerOptions.workerSrc =
+          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const pdf = await pdfjs.getDocument({
+          data: await file.arrayBuffer()
+        }).promise;
+
+        for (let n = 1; n <= pdf.numPages; n++) {
+          status.textContent = `تجهيز صفحة ${n} من ${pdf.numPages}...`;
+          const page = await pdf.getPage(n);
+          const viewport = page.getViewport({ scale: 2 });
+          const canvas = document.createElement('canvas');
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          await page.render({
+            canvasContext: canvas.getContext('2d'),
+            viewport
+          }).promise;
+          pages.push(canvas);
+        }
+      } else {
+        pages.push(file);
+      }
+
+      const worker = await Tesseract.createWorker('ara+eng');
+      let text = '';
+
+      for (let i = 0; i < pages.length; i++) {
+        status.textContent = `قراءة الصفحة ${i + 1} من ${pages.length}...`;
+        const result = await worker.recognize(pages[i]);
+        text += `\n--- الصفحة ${i + 1} ---\n${result.data.text}\n`;
+      }
+
+      await worker.terminate();
+      output.value = text.trim();
+      status.textContent = 'انتهى الاستخراج. راجع النص؛ لم تُضف محاضرات تلقائيًا بعد.';
+    } catch (error) {
+      status.textContent = 'حصل خطأ أثناء القراءة. جرّب صورة أو PDF أوضح.';
+      console.error(error);
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();
 </script></body></html>
