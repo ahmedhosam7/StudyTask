@@ -1,0 +1,185 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111827"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>StudyTask | منظم الكلية</title><style>
+:root{--bg:#0b1020;--panel:#121a2b;--panel2:#182238;--text:#f2f5ff;--muted:#9ca9c5;--line:#293650;--accent:#6975ff;--accent2:#8c62ff;--green:#22c99a;--red:#ff647c;--yellow:#ffc857;--shadow:0 12px 32px #0003}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;transition:.2s}body.light{--bg:#f3f5fb;--panel:#fff;--panel2:#f0f3fc;--text:#172039;--muted:#69748e;--line:#dce2f0;--shadow:0 8px 28px #17203912}button,input,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:1180px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));font-size:25px}.brand h1{font-size:22px;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:13px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{padding:10px 14px;border-radius:12px;background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.primary{background:linear-gradient(120deg,var(--accent),var(--accent2));color:white;border:0}.btn.small{padding:7px 10px;font-size:13px}.hero{padding:22px;border-radius:22px;background:linear-gradient(120deg,#4f5eea,#7954d9);color:white;display:flex;justify-content:space-between;align-items:center;gap:18px;box-shadow:var(--shadow);margin-bottom:18px}.hero h2{margin:0 0 6px;font-size:23px}.hero p{margin:0;opacity:.88}.progressWrap{min-width:155px;text-align:center}.progressRing{width:82px;height:82px;margin:auto auto 8px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#43e0b3 var(--pct),#ffffff35 0);position:relative}.progressRing:before{content:"";position:absolute;inset:7px;border-radius:50%;background:#5e60e4}.progressRing b{position:relative;font-size:20px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.stat,.panel,.classcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.stat{padding:16px}.stat .label{color:var(--muted);font-size:13px}.stat strong{display:block;font-size:27px;margin-top:5px}.stat .emoji{float:left;font-size:22px}.layout{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.panel{padding:18px;margin-bottom:16px}.panelHead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.panelHead h3{margin:0;font-size:17px}.muted{color:var(--muted)}.switcher{display:flex;gap:6px;padding:5px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}.switcher button{flex:1;padding:9px;border-radius:10px;background:transparent;color:var(--muted)}.switcher button.active{background:var(--accent);color:white}.daystrip{display:flex;gap:8px;overflow:auto;padding-bottom:8px;margin-bottom:12px}.day{min-width:65px;padding:10px 8px;border-radius:13px;border:1px solid var(--line);background:var(--panel2);color:var(--text);text-align:center}.day.active{background:var(--accent);color:white;border-color:var(--accent)}.day small{display:block;font-size:11px;opacity:.8;margin-top:3px}.classlist{display:grid;gap:10px}.classcard{padding:14px;box-shadow:none}.classTop{display:flex;justify-content:space-between;gap:10px}.className{font-weight:700}.meta{font-size:12px;color:var(--muted);margin-top:5px}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chip{font-size:11px;padding:5px 9px;border-radius:9px;background:var(--panel2);color:var(--muted)}.chip.online{color:var(--green);background:#1aa9821c}.chip.offline{color:#f6b94a;background:#e8a52a1b}.taskgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:13px}.task{border:1px solid var(--line);border-radius:11px;padding:8px;font-size:12px;display:flex;gap:6px;align-items:center;cursor:pointer;background:var(--panel2)}.task input{accent-color:var(--green);width:16px;height:16px}.task.done{color:var(--green);border-color:#22c99a70}.task.done span{text-decoration:line-through}.empty{text-align:center;padding:30px;color:var(--muted)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}.field input,.field select{width:100%;padding:11px;border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:11px;outline:none}.field.full{grid-column:1/-1}.checkline{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}.quick{display:grid;gap:8px}.quick button{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);color:var(--text);text-align:right}.quick button span:last-child{color:var(--accent)}.note{font-size:12px;color:var(--muted);line-height:1.7;margin-top:12px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:12px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--green);color:#052b22;padding:12px 18px;border-radius:12px;display:none;box-shadow:var(--shadow);z-index:9}.del{background:transparent;color:var(--red);font-size:18px;padding:0 5px}.tagdate{font-size:12px;color:var(--muted)}@media(max-width:800px){.app{padding:14px}.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero{align-items:flex-start}.hero h2{font-size:20px}.progressWrap{min-width:100px}.top{align-items:flex-start}.brand p{max-width:190px}}@media(max-width:430px){.hero{padding:16px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:23px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.taskgrid{grid-template-columns:1fr 1fr}.actions .btn{padding:9px 10px;font-size:12px}}
+
+/* Mobile fit fix: prevent the whole page from scrolling sideways */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{overflow-wrap:anywhere}
+.app{width:100%;min-width:0}
+.app *{min-width:0;}
+.top{flex-wrap:wrap}
+.actions{max-width:100%}
+.hero{flex-wrap:wrap;max-width:100%}
+.hero>div:first-child{flex:1 1 180px;min-width:0}
+.progressWrap{flex:0 1 110px;min-width:0}
+.panel,.stat,.classcard{min-width:0;max-width:100%}
+.panelHead{flex-wrap:wrap}
+.daystrip{display:flex;flex-wrap:wrap;overflow:visible;max-width:100%}
+.day{flex:1 1 calc(25% - 8px);min-width:0}
+.classTop>div{min-width:0;overflow-wrap:anywhere}
+.taskgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.task{min-width:0;overflow-wrap:anywhere}
+@media(max-width:430px){
+ .app{padding:10px}
+ .top{gap:10px;margin-bottom:14px}
+ .brand{min-width:0;flex:1 1 100%}
+ .brand h1{font-size:20px}
+ .brand p{max-width:100%;font-size:12px}
+ .actions{width:100%}
+ .actions .btn{flex:1 1 auto;padding:8px;font-size:12px}
+ .hero{padding:13px;gap:10px;border-radius:16px}
+ .hero h2{font-size:18px}
+ .hero p{font-size:12px}
+ .progressWrap{flex:0 0 86px;font-size:11px}
+ .progressRing{width:64px;height:64px}
+ .progressRing:before{inset:6px}
+ .progressRing b{font-size:17px}
+ .stats{gap:7px}
+ .stat{padding:10px;border-radius:14px}
+ .stat .label{font-size:11px}
+ .stat strong{font-size:21px}
+ .panel{padding:12px;border-radius:15px}
+ .panelHead h3{font-size:15px}
+ .switcher button{padding:8px 4px;font-size:12px}
+ .day{flex:1 1 calc(33.333% - 8px);padding:8px 4px;font-size:12px}
+ .classcard{padding:10px;border-radius:14px}
+ .className{font-size:14px}
+ .meta{font-size:11px;overflow-wrap:anywhere}
+ .chips{gap:4px}
+ .chip{font-size:10px;padding:4px 6px}
+ .taskgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ .task{padding:6px 4px;font-size:11px;gap:4px}
+ .task input{width:14px;height:14px;flex:0 0 auto}
+ .formgrid{grid-template-columns:minmax(0,1fr)}
+ .field.full{grid-column:auto}
+ input,select,button{max-width:100%}
+}
+
+
+#scheduleImportPanel .si-preview{display:block;width:100%;max-height:360px;object-fit:contain;border:1px solid var(--line);border-radius:10px;margin-top:8px}
+#scheduleImportPanel .si-pdf{width:100%;height:340px;border:1px solid var(--line);border-radius:10px;margin-top:8px}
+#scheduleImportPanel .si-draft{border:1px solid var(--line);background:var(--panel2);border-radius:10px;padding:10px;margin-top:8px}
+#scheduleImportPanel .si-draft button{margin-inline-start:6px}
+</style></head><body><div class="app"><header class="top"><div class="brand"><div class="logo">🎓</div><div><h1>StudyTask</h1><p>كل محاضراتك وسكاشنك ومهامك في مكان واحد</p></div></div><div class="actions"><button class="btn" id="themeBtn">☀️ الوضع الفاتح</button><button class="btn primary" onclick="document.getElementById('addPanel').scrollIntoView({behavior:'smooth'})">＋ إضافة</button></div></header>
+<section class="hero"><div><h2>أهلاً بيك 👋</h2><p>خطوة صغيرة كل يوم توصّلك لهدفك.</p><p style="margin-top:12px;font-size:13px" id="todayText"></p></div><div class="progressWrap"><div class="progressRing" id="ring" style="--pct:0%"><b id="percent">0%</b></div><div style="font-size:12px">إنجاز مهام الأسبوع</div></div></section>
+<section class="stats"><div class="stat"><span class="emoji">📚</span><div class="label">محاضرات وسكاشن</div><strong id="totalStat">0</strong></div><div class="stat"><span class="emoji">✅</span><div class="label">مهام مكتملة</div><strong id="doneStat">0</strong></div><div class="stat"><span class="emoji">⏳</span><div class="label">مهام متبقية</div><strong id="leftStat">0</strong></div><div class="stat"><span class="emoji">📍</span><div class="label">حضور مسجل</div><strong id="attendanceStat">0</strong></div></section>
+<div class="layout"><main><section class="panel"><div class="panelHead"><h3>🗓️ جدول الأسبوع</h3><span class="tagdate">A1 · الفصل الأول 2026/2027</span></div><div class="switcher" id="weekSwitch"><button data-week="odd" class="active">الأسبوع الفردي</button><button data-week="even">الأسبوع الزوجي</button></div><div class="daystrip" id="days"></div><div class="classlist" id="schedule"></div></section><section class="panel"><div class="panelHead"><h3>☑️ كل المهام</h3><button class="btn small" id="showAll">عرض الكل</button></div><div class="classlist" id="allTasks"></div></section></main>
+<aside><section class="panel" id="scheduleImportPanel"><div class="panelHead"><h3>📥 استيراد جدول من ملف</h3><span class="tag">تجريبي</span></div>
+<p class="note">ارفع صورة أو PDF للجدول، اختار مجموعتك والأسبوع، ثم راجع الحصص وأضفها. الملف يُعرض هنا، لكن استخراج الحصص تلقائيًا يحتاج قارئ PDF/OCR إضافيًا؛ لذلك أدخل بيانات الحصص في نموذج المراجعة.</p>
+<div class="formgrid">
+<div class="field full"><label for="siFile">ملف الجدول (PDF أو صورة)</label><input id="siFile" type="file" accept="application/pdf,image/*"></div>
+<div class="field"><label for="siGroup">المجموعة</label><select id="siGroup"></select></div>
+<div class="field"><label for="siWeek">الأسبوع</label><select id="siWeek"><option value="odd">فردي</option><option value="even">زوجي</option><option value="both">الفردي والزوجي</option></select></div>
+<div class="field full" id="siPreviewWrap" hidden></div>
+<div class="field full"><label for="siName">اسم المحاضرة / السكشن</label><input id="siName" placeholder="مثال: رياضيات (1)"></div>
+<div class="field"><label for="siSubject">المادة (اختياري)</label><input id="siSubject" placeholder="اسم المادة"></div>
+<div class="field"><label for="siKind">النوع</label><select id="siKind"><option value="lecture">محاضرة</option><option value="section">سكشن</option></select></div>
+<div class="field"><label for="siDay">اليوم</label><select id="siDay"><option>السبت</option><option>الأحد</option><option>الاثنين</option><option>الثلاثاء</option><option>الأربعاء</option><option>الخميس</option><option>الجمعة</option></select></div>
+<div class="field"><label for="siStart">من الساعة</label><select id="siStart"><option>9:00 ص</option><option>11:00 ص</option><option>1:00 م</option><option>3:00 م</option><option>5:00 م</option></select></div>
+<div class="field"><label for="siEnd">إلى الساعة</label><select id="siEnd"><option>11:00 ص</option><option>1:00 م</option><option>3:00 م</option><option>5:00 م</option><option>7:00 م</option></select></div>
+<div class="field"><label for="siMode">الحضور</label><select id="siMode"><option value="offline">أوفلاين / الكلية</option><option value="online">أونلاين</option></select></div>
+<div class="field"><label for="siPlace">المكان</label><input id="siPlace" placeholder="مدرج 1 / معمل / أونلاين"></div>
+<div class="field full"><label for="siInstructor">الدكتور / المعيد (اختياري)</label><input id="siInstructor" placeholder="اسم الدكتور أو المعيد"></div>
+<div class="field full"><button class="btn primary" type="button" id="siAddClass" style="width:100%">إضافة الحصة للمراجعة</button></div>
+</div><div id="siDrafts"></div>
+<div class="actions" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn primary" type="button" id="siSaveAll">حفظ الحصص في جدول التطبيق</button><button class="btn" type="button" id="siClear">مسح الحصص المضافة</button></div><p class="note" id="siStatus" aria-live="polite"></p>
+</section>
+<section class="panel" id="addPanel"><div class="panelHead"><h3>➕ إضافة محاضرة أو سكشن</h3></div><form id="addForm"><div class="formgrid"><div class="field full"><label>اسم المحاضرة / السكشن</label><input id="name" required placeholder="مثال: أساسيات علوم الحاسب"></div><div class="field"><label>المادة</label><input id="subject" placeholder="اسم المادة"></div><div class="field"><label>النوع</label><select id="kind"><option value="lecture">محاضرة</option><option value="section">سكشن</option></select></div><div class="field"><label>اليوم</label><select id="day"><option>السبت</option><option>الأحد</option><option>الاثنين</option><option>الثلاثاء</option><option>الأربعاء</option><option>الخميس</option><option>الجمعة</option></select></div><div class="field"><label>التاريخ (اختياري)</label><input id="classDate" type="date"></div><div class="field"><label>الأسبوع</label><select id="week"><option value="both">الفردي والزوجي</option><option value="odd">الفردي فقط</option><option value="even">الزوجي فقط</option></select></div><div class="field"><label>من الساعة</label><select id="start"><option>9:00 ص</option><option>11:00 ص</option><option>1:00 م</option><option>3:00 م</option><option>5:00 م</option></select></div><div class="field"><label>إلى الساعة</label><select id="end"><option>11:00 ص</option><option>1:00 م</option><option>3:00 م</option><option>5:00 م</option><option>7:00 م</option></select></div><div class="field"><label>الحضور</label><select id="mode"><option value="offline">أوفلاين / الكلية</option><option value="online">أونلاين</option></select></div><div class="field"><label>المكان / الرابط</label><input id="place" placeholder="مدرج 1 أو رابط المحاضرة"></div><div class="field full"><label>الدكتور / المعيد (اختياري)</label><input id="instructor" placeholder="اسم الدكتور أو المعيد"></div><div class="field full"><label class="checkline"><input type="checkbox" id="tasksDefault" checked> إضافة مهام الكويز والواجب والحضور تلقائيًا</label></div><div class="field full"><button class="btn primary" style="width:100%" type="submit">حفظ في الجدول</button></div></div></form><p class="note">تقدر تعدّل الجدول بحذف أي عنصر أو إضافة محاضراتك. تقدر تضيف تاريخًا لكل موعد. علامة إنجاز المهام تُصفّر كل أسبوعين تلقائيًا مع الاحتفاظ بأسماء ومواعيد المحاضرات والسكاشن. بياناتك محفوظة على نفس الجهاز والمتصفح.</p></section>
+<section class="panel"><div class="panelHead"><h3>⚡ اختصارات</h3></div><div class="quick"><button onclick="jumpAdd('lecture')"><span>📘 إضافة محاضرة</span><span>＋</span></button><button onclick="jumpAdd('section')"><span>🧪 إضافة سكشن</span><span>＋</span></button><button onclick="toggleWeek()"><span>🔁 تبديل الأسبوع</span><span>↔</span></button><button onclick="exportData()"><span>💾 تصدير نسخة احتياطية</span><span>↓</span></button><button onclick="clearAllClasses()" style="color:var(--red)"><span>🗑️ مسح كل الجدول</span><span>×</span></button><button onclick="document.getElementById('importFile').click()"><span>📂 استيراد نسخة احتياطية</span><span>↑</span></button><input id="importFile" type="file" accept="application/json" hidden></div></section></aside></div><div class="footer">StudyTask · جدول A1 من ملف جدول المستوى الأول · تقدر تعدّل أي بيانات حسب آخر تحديث من الكلية</div></div><div class="toast" id="toast"></div>
+<script>
+const days=['السبت','الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة'];
+const base=[
+{id:'o1',name:'رياضيات (1)',subject:'رياضيات (1)',kind:'section',day:'السبت',week:'odd',start:'1:00 م',end:'3:00 م',mode:'offline',place:'مدرج 1',instructor:'م. سهيلة محمد',source:true},
+{id:'o2',name:'رياضيات متقطعة',subject:'رياضيات متقطعة',kind:'section',day:'الأحد',week:'odd',start:'3:00 م',end:'5:00 م',mode:'offline',place:'مدرج 1',instructor:'م. آلاء أمري',source:true},
+{id:'o3',name:'أساسيات علوم الحاسب',subject:'أساسيات علوم الحاسب',kind:'section',day:'الاثنين',week:'odd',start:'9:00 ص',end:'11:00 ص',mode:'online',place:'أونلاين',instructor:'م. ياسمين',source:true},
+{id:'o4',name:'أساسيات علوم الحاسب',subject:'أساسيات علوم الحاسب',kind:'lecture',day:'الثلاثاء',week:'both',start:'11:00 ص',end:'1:00 م',mode:'offline',place:'المركزي السفلي',instructor:'أ.م.د أسامة غنيم',source:true},
+{id:'o5',name:'إحصاء واحتمالات (1)',subject:'إحصاء واحتمالات (1)',kind:'section',day:'الأربعاء',week:'odd',start:'3:00 م',end:'5:00 م',mode:'offline',place:'مدرج 1',instructor:'م. أحمد عصام',source:true},
+{id:'o6',name:'مقدمة في نظم المعلومات',subject:'مقدمة في نظم المعلومات',kind:'section',day:'الخميس',week:'odd',start:'9:00 ص',end:'11:00 ص',mode:'online',place:'أونلاين',instructor:'م.م نهى مصطفى',source:true},
+{id:'e1',name:'أساسيات علوم الحاسب',subject:'أساسيات علوم الحاسب',kind:'section',day:'السبت',week:'even',start:'3:00 م',end:'5:00 م',mode:'offline',place:'معمل H',instructor:'م. ياسمين',source:true},
+{id:'e2',name:'مقدمة في نظم المعلومات',subject:'مقدمة في نظم المعلومات',kind:'section',day:'الأحد',week:'even',start:'9:00 ص',end:'11:00 ص',mode:'online',place:'أونلاين',instructor:'م. ياسمين',source:true},
+{id:'e3',name:'إحصاء واحتمالات (1)',subject:'إحصاء واحتمالات (1)',kind:'section',day:'الأحد',week:'even',start:'9:00 ص',end:'11:00 ص',mode:'online',place:'أونلاين',instructor:'م.م إيمان السيد',source:true},
+{id:'e4',name:'رياضيات متقطعة',subject:'رياضيات متقطعة',kind:'section',day:'الثلاثاء',week:'even',start:'9:00 ص',end:'11:00 ص',mode:'offline',place:'مدرج 1',instructor:'م. آلاء أمري',source:true},
+{id:'e5',name:'أساسيات علوم الحاسب',subject:'أساسيات علوم الحاسب',kind:'lecture',day:'الثلاثاء',week:'both',start:'11:00 ص',end:'1:00 م',mode:'offline',place:'المركزي السفلي',instructor:'أ.م.د أسامة غنيم',source:true},
+{id:'e6',name:'رياضيات (1)',subject:'رياضيات (1)',kind:'lecture',day:'الثلاثاء',week:'both',start:'9:00 ص',end:'11:00 ص',mode:'offline',place:'المركزي العلوي',instructor:'أ.د نانيس الحفناوي',source:true},
+{id:'e7',name:'مقدمة في نظم المعلومات',subject:'مقدمة في نظم المعلومات',kind:'lecture',day:'الثلاثاء',week:'both',start:'1:00 م',end:'3:00 م',mode:'offline',place:'المركزي العلوي',instructor:'أ.م.د أمنية الربربي',source:true},
+{id:'e8',name:'إحصاء واحتمالات (1)',subject:'إحصاء واحتمالات (1)',kind:'lecture',day:'الثلاثاء',week:'both',start:'1:00 م',end:'3:00 م',mode:'offline',place:'المركزي السفلي',instructor:'د. مريان وجدي، د. شيماء هجرس',source:true},
+{id:'e9',name:'لغة إنجليزية (1)',subject:'لغة إنجليزية (1)',kind:'lecture',day:'الأربعاء',week:'both',start:'9:00 ص',end:'11:00 ص',mode:'online',place:'أونلاين',instructor:'د. وليد سمير',source:true},
+{id:'e10',name:'رياضيات متقطعة',subject:'رياضيات متقطعة',kind:'lecture',day:'الأربعاء',week:'both',start:'1:00 م',end:'3:00 م',mode:'online',place:'أونلاين',instructor:'أ.م.د أمنية الربربي، أ.م.د عايدة نصر',source:true},
+{id:'e11',name:'مقدمة في نظم المعلومات',subject:'مقدمة في نظم المعلومات',kind:'lecture',day:'الأربعاء',week:'both',start:'11:00 ص',end:'1:00 م',mode:'online',place:'أونلاين',instructor:'أ.م.د أمنية الربربي',source:true},
+{id:'e12',name:'رياضيات (1)',subject:'رياضيات (1)',kind:'lecture',day:'الأربعاء',week:'even',start:'11:00 ص',end:'1:00 م',mode:'online',place:'أونلاين',instructor:'أ.د نانيس الحفناوي',source:true}
+];
+function tasksFor(id){return {quiz:false,homework:false,attendance:false}}
+let data;try{data=JSON.parse(localStorage.getItem('studytask-v1'))||null}catch(e){};if(!data)data={classes:base.map(c=>({...c,tasks:tasksFor(c.id)})),theme:'dark',week:'odd',day:days[0]};
+// ensure newly seeded task object exists
+for(const c of data.classes){if(!c.tasks)c.tasks=tasksFor(c.id)}
+// Reset only task checkmarks every two weeks; keep class names and schedule intact.
+function twoWeekBucket(d=new Date()){const day=Math.floor(d.getTime()/86400000);return Math.floor(day/14)}
+const currentBucket=twoWeekBucket();
+if(data.taskResetBucket===undefined){data.taskResetBucket=currentBucket;}
+else if(data.taskResetBucket!==currentBucket){for(const c of data.classes){c.tasks={quiz:false,homework:false,attendance:false};}data.taskResetBucket=currentBucket;try{localStorage.setItem('studytask-v1',JSON.stringify(data))}catch(e){}}
+function save(){localStorage.setItem('studytask-v1',JSON.stringify(data));render()}
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',1900)}
+function taskCount(c){return Object.values(c.tasks||{}).filter(Boolean).length}
+function visible(c){return c.week==='both'||c.week===data.week}
+function render(){document.body.classList.toggle('light',data.theme==='light');document.getElementById('themeBtn').textContent=data.theme==='dark'?'☀️ الوضع الفاتح':'🌙 الوضع الداكن';document.querySelectorAll('#weekSwitch button').forEach(b=>b.classList.toggle('active',b.dataset.week===data.week));document.getElementById('todayText').textContent='النهارده '+new Date().toLocaleDateString('ar-EG',{weekday:'long',day:'numeric',month:'long'});let all=data.classes.filter(visible);let total=all.length*3,done=all.reduce((n,c)=>n+taskCount(c),0),att=all.filter(c=>c.tasks.attendance).length,pct=total?Math.round(done/total*100):0;document.getElementById('totalStat').textContent=all.length;document.getElementById('doneStat').textContent=done;document.getElementById('leftStat').textContent=total-done;document.getElementById('attendanceStat').textContent=att;document.getElementById('percent').textContent=pct+'%';document.getElementById('ring').style.setProperty('--pct',pct+'%');
+let ds=document.getElementById('days');ds.innerHTML='';days.forEach((d,i)=>{let b=document.createElement('button');b.className='day'+(data.day===d?' active':'');b.innerHTML=d+'<small>'+(i===0?'السبت':i===1?'الأحد':i===2?'الاثنين':i===3?'الثلاثاء':i===4?'الأربعاء':i===5?'الخميس':'الجمعة')+'</small>';b.onclick=()=>{data.day=d;save()};ds.appendChild(b)});
+let items=all.filter(c=>c.day===data.day).sort((a,b)=>a.start.localeCompare(b.start,'ar'));document.getElementById('schedule').innerHTML=items.length?items.map(cardHTML).join(''):'<div class="empty">مفيش محاضرات أو سكاشن مسجلة لليوم ده 🌿<br><button class="btn small" style="margin-top:12px" onclick="jumpAdd()">＋ أضف موعد</button></div>';
+document.getElementById('allTasks').innerHTML=all.slice().sort((a,b)=>days.indexOf(a.day)-days.indexOf(b.day)).map(c=>`<div class="classcard"><div class="classTop"><div><div class="className">${esc(c.name)}</div><div class="meta">${c.day}${c.date?' · '+esc(c.date):''} · ${c.start} - ${c.end}</div></div><span class="chip ${c.mode}">${c.mode==='online'?'أونلاين':'أوفلاين'}</span></div><div class="taskgrid">${taskHTML(c,'quiz','كويز')}${taskHTML(c,'homework','واجب')}${taskHTML(c,'attendance','حضور')}</div></div>`).join('')||'<div class="empty">لسه مفيش مواعيد</div>';
+}
+function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function taskHTML(c,k,label){return `<label class="task ${c.tasks[k]?'done':''}"><input type="checkbox" ${c.tasks[k]?'checked':''} onchange="checkTask('${c.id}','${k}',this.checked)"><span>${label}</span></label>`}
+function cardHTML(c){return `<article class="classcard"><div class="classTop"><div><div class="className">${c.kind==='lecture'?'📘':'🧪'} ${esc(c.name)}</div><div class="meta">${c.date?'📅 '+esc(c.date)+' · ':''}${esc(c.start)} – ${esc(c.end)} · ${esc(c.place||'مكان غير محدد')}</div>${c.instructor?`<div class="meta">👤 ${esc(c.instructor)}</div>`:''}</div><button class="del" title="حذف الموعد" onclick="removeClass('${c.id}')">×</button></div><div class="chips"><span class="chip">${c.kind==='lecture'?'محاضرة':'سكشن'}</span><span class="chip ${c.mode}">${c.mode==='online'?'● أونلاين':'● أوفلاين'}</span><span class="chip">${c.week==='both'?'الفردي والزوجي':c.week==='odd'?'الفردي':'الزوجي'}</span></div><div class="taskgrid">${taskHTML(c,'quiz','كويز')}${taskHTML(c,'homework','واجب')}${taskHTML(c,'attendance','حضور')}</div></article>`}
+window.checkTask=(id,k,v)=>{let c=data.classes.find(x=>x.id===id);if(c){c.tasks[k]=v;save();if(v)toast('عاش! اتسجل الإنجاز ✅')}};
+window.removeClass=id=>{if(confirm('متأكد إنك عايز تحذف الموعد ده؟')){data.classes=data.classes.filter(c=>c.id!==id);save();toast('تم حذف الموعد')}};
+window.toggleWeek=()=>{data.week=data.week==='odd'?'even':'odd';save()};window.jumpAdd=k=>{document.getElementById('addPanel').scrollIntoView({behavior:'smooth'});if(k)document.getElementById('kind').value=k};
+document.getElementById('weekSwitch').onclick=e=>{let b=e.target.closest('button[data-week]');if(b){data.week=b.dataset.week;save()}};document.getElementById('themeBtn').onclick=()=>{data.theme=data.theme==='dark'?'light':'dark';save()};document.getElementById('showAll').onclick=()=>{data.day=days.find(d=>data.classes.some(c=>c.day===d&&visible(c)))||'السبت';save();document.getElementById('allTasks').scrollIntoView({behavior:'smooth'})};
+document.getElementById('addForm').onsubmit=e=>{e.preventDefault();let id='c'+Date.now(),kind=document.getElementById('kind').value,name=document.getElementById('name').value.trim();let c={id,name,subject:document.getElementById('subject').value.trim()||name,kind,day:document.getElementById('day').value,date:document.getElementById('classDate').value,week:document.getElementById('week').value,start:document.getElementById('start').value,end:document.getElementById('end').value,mode:document.getElementById('mode').value,place:document.getElementById('place').value.trim()||(document.getElementById('mode').value==='online'?'أونلاين':'غير محدد'),instructor:document.getElementById('instructor').value.trim(),source:false,tasks:document.getElementById('tasksDefault').checked?tasksFor(id):{quiz:false,homework:false,attendance:false}};data.classes.push(c);data.day=c.day;data.week=c.week==='even'?'even':'odd';save();e.target.reset();document.getElementById('tasksDefault').checked=true;toast('اتضاف الموعد للجدول بنجاح 🎉');window.scrollTo({top:0,behavior:'smooth'})};
+window.clearAllClasses=()=>{if(confirm('متأكد إنك عايز تمسح كل المحاضرات والسكاشن من الجدول؟ لا يمكن التراجع عن المسح إلا لو عندك نسخة احتياطية.')){data.classes=[];save();toast('تم مسح الجدول بالكامل')}};
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='studytask-backup.json';a.click();URL.revokeObjectURL(a.href)}window.exportData=exportData;
+document.getElementById('importFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!Array.isArray(x.classes))throw 0;data=x;save();toast('تم استيراد النسخة الاحتياطية')}catch(err){alert('الملف مش نسخة احتياطية صالحة من StudyTask')}e.target.value=''};
+
+// Schedule import helper: previews files and lets the user review class rows before saving.
+(function(){
+ const $=id=>document.getElementById(id); let drafts=[]; let previewUrl=null;
+ const group=$('siGroup'); if(group){for(let i=1;i<=20;i++){let o=document.createElement('option');o.value='A'+i;o.textContent='A'+i;group.appendChild(o)}}
+ $('siFile').addEventListener('change',e=>{
+   const f=e.target.files&&e.target.files[0],wrap=$('siPreviewWrap');wrap.innerHTML='';wrap.hidden=!f;
+   if(previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null}
+   if(!f)return;
+   $('siStatus').textContent='تم اختيار: '+f.name+' — راجع الملف وأدخل الحصص في النموذج.';
+   previewUrl=URL.createObjectURL(f);
+   if(f.type.startsWith('image/')){const im=document.createElement('img');im.className='si-preview';im.alt='معاينة الجدول';im.src=previewUrl;wrap.appendChild(im)}
+   else if(f.type==='application/pdf'){const frame=document.createElement('iframe');frame.className='si-pdf';frame.title='معاينة ملف الجدول';frame.src=previewUrl;wrap.appendChild(frame)}
+   else {$('siStatus').textContent='نوع الملف غير مدعوم. اختار PDF أو صورة.'}
+ });
+ function renderDrafts(){
+   const box=$('siDrafts');
+   if(!drafts.length){box.innerHTML='<p class="note">لم تضف حصصًا للمراجعة بعد.</p>';return}
+   box.innerHTML='<h4>مراجعة قبل الحفظ ('+drafts.length+')</h4>'+drafts.map((d,i)=>`<div class="si-draft"><strong>${d.name}</strong><div>${d.day} · ${d.start}–${d.end} · ${d.place||'المكان غير محدد'}</div><small>${d.kind==='section'?'سكشن':'محاضرة'} · ${d.week==='odd'?'أسبوع فردي':d.week==='even'?'أسبوع زوجي':'الفردي والزوجي'} · ${d.group}</small><div style="margin-top:7px"><button type="button" class="btn" data-si-edit="${i}">تعديل</button><button type="button" class="btn" data-si-delete="${i}">حذف</button></div></div>`).join('');
+   box.querySelectorAll('[data-si-delete]').forEach(b=>b.addEventListener('click',()=>{drafts.splice(+b.dataset.siDelete,1);renderDrafts()}));
+   box.querySelectorAll('[data-si-edit]').forEach(b=>b.addEventListener('click',()=>{const d=drafts[+b.dataset.siEdit];$('siName').value=d.name;$('siSubject').value=d.subject;$('siKind').value=d.kind;$('siDay').value=d.day;$('siStart').value=d.start;$('siEnd').value=d.end;$('siMode').value=d.mode;$('siPlace').value=d.place;$('siInstructor').value=d.instructor;$('siWeek').value=d.week;$('siGroup').value=d.group;drafts.splice(+b.dataset.siEdit,1);renderDrafts();$('siStatus').textContent='عدّل بيانات الحصة ثم اضغط إضافة الحصة للمراجعة.';}));
+ }
+ $('siAddClass').addEventListener('click',()=>{
+   const name=$('siName').value.trim();if(!name){$('siStatus').textContent='اكتب اسم المحاضرة أو السكشن أولًا.';$('siName').focus();return}
+   drafts.push({name,subject:$('siSubject').value.trim()||name,kind:$('siKind').value,day:$('siDay').value,week:$('siWeek').value,group:$('siGroup').value,start:$('siStart').value,end:$('siEnd').value,mode:$('siMode').value,place:$('siPlace').value.trim()||($('siMode').value==='online'?'أونلاين':'غير محدد'),instructor:$('siInstructor').value.trim()});
+   $('siName').value='';$('siStatus').textContent='اتضافت للمراجعة. راجع القائمة قبل الحفظ.';renderDrafts();
+ });
+ $('siClear').addEventListener('click',()=>{drafts=[];renderDrafts();$('siStatus').textContent='تم مسح الحصص غير المحفوظة.'});
+ $('siSaveAll').addEventListener('click',()=>{
+   if(!drafts.length){$('siStatus').textContent='أضف حصة واحدة على الأقل قبل الحفظ.';return}
+   const before=Array.isArray(data.classes)?data.classes.length:0;
+   drafts.forEach((d,i)=>{
+     const id='imp-'+Date.now()+'-'+i;
+     data.classes.push({id,name:d.name,subject:d.subject,kind:d.kind,day:d.day,week:d.week,start:d.start,end:d.end,mode:d.mode,place:d.place,instructor:d.instructor,source:false,tasks:{quiz:false,homework:false,attendance:false},importGroup:d.group});
+   });
+   data.day=drafts[0].day;data.week=drafts[0].week==='even'?'even':'odd';
+   save();drafts=[];renderDrafts();$('siStatus').textContent='تم حفظ الحصص في جدول التطبيق. راجع الأيام والأسابيع من الجدول الرئيسي.';
+ });
+ renderDrafts();
+})();
+
+render();
+
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+}
+</script></body></html>
