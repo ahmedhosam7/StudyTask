@@ -1,0 +1,9 @@
+Android APK build steps (requires Node.js + Android Studio + Android SDK):
+1) Copy this folder and the sibling web folder together, preserving their relative paths.
+2) In android-capacitor run: npm install
+3) Run: npx cap add android
+4) Run: npx cap sync android
+5) Run: npx cap open android
+6) In Android Studio choose Build > Build Bundle(s) / APK(s) > Build APK(s).
+Important: webDir path may need to be set to an actual copied web directory named www inside this folder. Easiest: copy ../web to android-capacitor/www and change webDir to "www" before running cap add android.
+This starter uses local browser storage only; cloud sync is not implemented yet.

@@ -1,0 +1,7 @@
+Windows build steps (run on Windows with Node.js installed):
+1) Copy the whole StudyTask-Desktop-Mobile-Source folder to Windows.
+2) Open PowerShell in windows-electron.
+3) Run: npm install
+4) Run: npm run build:win
+5) Installer appears in windows-electron/dist.
+Note: this packages the current local-only version. It does NOT implement cross-device cloud sync yet.
